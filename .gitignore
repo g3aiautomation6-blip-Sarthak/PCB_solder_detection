@@ -1,0 +1,18 @@
+@"
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.vscode/
+.idea/
+*.pth
+*.pt
+*.onnx
+runs/
+output/
+outputs/
+checkpoints/
+wandb/
+"@ | Set-Content .gitignore
