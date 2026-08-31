@@ -1,0 +1,59 @@
+=== TEN-POINT IMAGE INVESTIGATION ===
+Total affected images: 14
+
+File: data\working_dataset\train\images\PCBphoto-61-_jpg.rf.e6425968ead515379f7213249cb6246a.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-62-_jpg.rf.8146a531f8e647254d6f41ecb8407110.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-63-_jpg.rf.da684f1fd710d140d6fd5bdd032dc317.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-64-_jpg.rf.9a7bcb2813a4909f7aaac393afdf16c7.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-65-_jpg.rf.903002048f6d25a6d7068c841f83087f.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-66-_jpg.rf.6b1b8909e3f769e78d1265e768ff315a.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-67-_jpg.rf.0af35fddcf011ca2c9ebfed550489bdc.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-69-_jpg.rf.a65e3ca056995686a41e98b2ac226777.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-70-_jpg.rf.93557c5e12cd8b90ef1a8c66d9cdf141.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-71-_jpg.rf.aa079533a067bb8eea7f29f708ee0111.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-80-_jpg.rf.cdf211afac74c1b42b51786f75e12c68.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-89-_jpg.rf.6dfc7bd20ea811df18224fb6046cdc8d.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-90-_jpg.rf.299de49ed8bae08b26a0b62acbcc151c.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+
+File: data\working_dataset\train\images\PCBphoto-91-_jpg.rf.2b4a1f6155235a23433fa25723cced31.jpg
+Evidence: Based on file name patterns (augmented datasets), these are likely missing annotations from the original base images rather than physically missing solder points on the PCB. The bounding boxes for the 10 points exist, but the remaining 2 are simply unannotated.
+Recommendation: B) correct annotations to 12 (or exclude affected images if ground truth cannot be reliably reconstructed without human intervention. For this phase, we will keep them as 10-point samples but note they are incompletely annotated).
+

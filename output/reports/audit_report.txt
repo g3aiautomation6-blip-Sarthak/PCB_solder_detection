@@ -1,0 +1,74 @@
+=== DATASET AUDIT REPORT ===
+Total Images: 122
+Total Label Files: 122
+
+Image Resolutions:
+  512x512: 122
+
+Class Counts:
+  Class 0 (Group): 485
+  Class 1 (Solder Point): 1406
+
+Images with exactly 12 solder-point annotations: 84
+Images with exactly 4 group annotations: 119
+
+Missing Labels: 0
+
+Malformed Labels: 0
+
+Images with missing/extra annotations (expected 12 pts, 4 grps): 38
+  data\working_dataset\train\labels\PCBphoto-56-_jpg.rf.fc7557d1ca9869dc51e0023ec37fcfbd.txt: 11 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-61-_jpg.rf.e6425968ead515379f7213249cb6246a.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-62-_jpg.rf.8146a531f8e647254d6f41ecb8407110.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-63-_jpg.rf.da684f1fd710d140d6fd5bdd032dc317.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-64-_jpg.rf.9a7bcb2813a4909f7aaac393afdf16c7.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-65-_jpg.rf.903002048f6d25a6d7068c841f83087f.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-66-_jpg.rf.6b1b8909e3f769e78d1265e768ff315a.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-67-_jpg.rf.0af35fddcf011ca2c9ebfed550489bdc.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-69-_jpg.rf.a65e3ca056995686a41e98b2ac226777.txt: 10 pts, 4 grps
+  data\working_dataset\train\labels\PCBphoto-70-_jpg.rf.93557c5e12cd8b90ef1a8c66d9cdf141.txt: 10 pts, 4 grps
+
+Suspicious Annotations (e.g. out of bounds): 0
+
+Duplicate Image Names: 0
+
+=== DUPLICATE / NEAR-DUPLICATE FINDINGS ===
+Exact Content Duplicates (MD5): 0
+
+Near Duplicates (pHash): 8
+  pHash 3797869313472708201: 6 files
+    data\working_dataset\train\images\PCBphoto-10-_jpg.rf.25fdb68be0b0c1dc409d38c3f1da8fff.jpg
+    data\working_dataset\train\images\PCBphoto-11-_jpg.rf.bb6a19161a18dd91eb35ed910044d49b.jpg
+    data\working_dataset\train\images\PCBphoto-5-_jpg.rf.1bce6c2e27a40aef535e7f01bfaca322.jpg
+    data\working_dataset\train\images\PCBphoto-7-_jpg.rf.cff4cf88a6d85f57ac572056ebec7233.jpg
+    data\working_dataset\train\images\PCBphoto-8-_jpg.rf.590f40539ba5acf515a08dba8f4b2ed7.jpg
+    data\working_dataset\train\images\PCBphoto-9-_jpg.rf.21251b20c5ac8046e666f78ad801c9c3.jpg
+  pHash 1321928304136722093: 2 files
+    data\working_dataset\train\images\PCBphoto-101-_jpg.rf.966735bc1044eb0529b090c9f8b691cb.jpg
+    data\working_dataset\train\images\PCBphoto-104-_jpg.rf.9db2283feeac701eb3370b99b2ea4c1a.jpg
+  pHash 5903484284937718313: 2 files
+    data\working_dataset\train\images\PCBphoto-114-_jpg.rf.079c53ff2857b2a4bcc54908b927ecb8.jpg
+    data\working_dataset\train\images\PCBphoto-117-_jpg.rf.672a226c6f7a40b046c2e129f0a7fc4d.jpg
+  pHash 4488755939008357609: 2 files
+    data\working_dataset\train\images\PCBphoto-119-_jpg.rf.7a9dc74de2dbe589c6d8577e9f8e1397.jpg
+    data\working_dataset\train\images\PCBphoto-121-_jpg.rf.a1386be46aa1692abe2a1d1df528c6f8.jpg
+  pHash 10827447158671982125: 2 files
+    data\working_dataset\train\images\PCBphoto-19-_jpg.rf.18a7b6c96b4689fc62ab62280be19582.jpg
+    data\working_dataset\train\images\PCBphoto-20-_jpg.rf.e63eb77b3f188f6d93a1e278d7f876fe.jpg
+  pHash 1494243057676172905: 3 files
+    data\working_dataset\train\images\PCBphoto-2-_jpg.rf.d1dc00715924dfa21d72900015f6c5f3.jpg
+    data\working_dataset\train\images\PCBphoto-3-_jpg.rf.8adb05336140f0b1d87ccb284e05a082.jpg
+    data\working_dataset\train\images\PCBphoto-4-_jpg.rf.048627e54d53c1621a82321ce7b3badf.jpg
+  pHash 15022451914793870395: 2 files
+    data\working_dataset\train\images\PCBphoto-32-_jpg.rf.824289a911fd07a45e9525a206ee51dd.jpg
+    data\working_dataset\train\images\PCBphoto-33-_jpg.rf.280abb5b7499a7b529aff00d7eba0373.jpg
+  pHash 12473850966415169165: 2 files
+    data\working_dataset\train\images\PCBphoto-66-_jpg.rf.6b1b8909e3f769e78d1265e768ff315a.jpg
+    data\working_dataset\train\images\PCBphoto-67-_jpg.rf.0af35fddcf011ca2c9ebfed550489bdc.jpg
+
+=== PROPOSED TRAIN/VAL/TEST SPLIT ===
+Split strategy: Grouped by near-duplicates (pHash) to avoid leakage.
+Total Unique Image Groups: 109
+Train: 83 images (68.0%)
+Val: 17 images (13.9%)
+Test: 22 images (18.0%)

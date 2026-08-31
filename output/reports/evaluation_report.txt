@@ -1,0 +1,12 @@
+=== RT-DETRv2-L TEST SET EVALUATION ===
+
+Total Test Images: 22
+1. Total ground-truth solder points: 255
+2. Total detected solder points: 1137
+3. True positives: 241
+4. False positives: 896
+5. False negatives: 14
+7. Images with exactly 12 detected solder points: 0
+8. Images with exactly 10 detected solder points: 0
+9. Images with other counts: 22
+10. Exact 12-point image success rate: 0.00%

@@ -1,0 +1,8 @@
+names:
+- group
+- solder_point
+nc: 2
+path: C:\Users\SM 464\Desktop\PCB_Solder_detection\data\rtdetr_dataset
+test: test/images
+train: train/images
+val: val/images

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['pin_group', 'solder_ball']
+
+roboflow:
+  workspace: sampurna-roy-0he2z
+  project: solder-detection-k436a
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/sampurna-roy-0he2z/solder-detection-k436a/1

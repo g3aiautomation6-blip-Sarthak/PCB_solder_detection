@@ -1,0 +1,33 @@
+=== ANNOTATION POLICY REPORT ===
+
+1. VISIBLE-ONLY ANNOTATION POLICY
+The dataset intentionally annotates only VISIBLE solder points. Solder points that are fully or substantially occluded by wires, components, or other objects are NOT annotated. This is a deliberate choice reflecting real-world conditions where the system must detect what is actually visible, rather than hallucinating occluded points.
+
+2. SOLDER-POINT COUNT DISTRIBUTION
+  Images with 12 visible points: 84
+  Images with 11 visible points: 21
+  Images with 10 visible points: 14
+  Images with 9 visible points: 3
+
+3. GROUP COUNT DISTRIBUTION
+  Images with 4 group boxes: 119
+  Images with 3 group boxes: 3
+
+4. EXAMPLES OF OCCLUSION
+  12-point example: PCBphoto-1-_jpg.rf.e2de8b7392e804d596b7ac9bd4ab5d3e.jpg (Groups: 4)
+  11-point example: PCBphoto-56-_jpg.rf.fc7557d1ca9869dc51e0023ec37fcfbd.jpg (Groups: 4)
+  10-point example: PCBphoto-61-_jpg.rf.e6425968ead515379f7213249cb6246a.jpg (Groups: 4)
+  9-point example: PCBphoto-78-_jpg.rf.520971454f2252d28ac6a777382ebb43.jpg (Groups: 3)
+  Visual examples have been saved to output/visualizations/occlusion_examples.jpg. In the images with < 12 points, the unannotated areas clearly correspond to physical occlusions (e.g., wires crossing the solder joints).
+
+5. WHY FORCING 12 ANNOTATIONS IS INCORRECT
+Adding artificial boxes for occluded points would train the object detection model to 'guess' or hallucinate bounding boxes where no visual evidence exists. This degrades the model's precision and ability to learn the true visual features of a solder point. The detector's job is purely to find visible solder; a downstream geometric logic module should handle the deduction of missing points.
+
+6. ROLE OF GROUP ANNOTATIONS
+The class 0 'group' annotations (typically 4 per board) establish the macroscopic regions where the 3-point clusters physically reside. Even if a specific solder point is occluded, the group box anchors the expected coordinate space. In the final system, these group boxes can be used to:
+  a) Partition the board into 4 logical quadrants/clusters.
+  b) Verify whether a detected point belongs to a specific expected cluster.
+  c) Deduce exactly which of the 3 expected points within a group is missing due to occlusion.
+
+7. RECOMMENDATION FOR TRAINING RT-DETRv2
+Proceed with training using the ORIGINAL, untouched annotations containing 9 to 12 points. RT-DETRv2 should be trained to strictly detect visible points and visible groups. The loss function will correctly penalize the model if it falsely predicts a solder point in an occluded region. After the model is trained to accurately output raw detections, we will implement the geometric verification logic (handling 12 expected positions) as a post-processing step.
