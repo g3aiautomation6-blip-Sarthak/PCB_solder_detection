@@ -1,0 +1,8 @@
+model: RT-DETRv2-L
+backbone: HGNetv2-L
+checkpoint: models/baseline_B_100epoch/best.pth
+confidence_threshold: 0.45
+geometry_tolerance: 0.025
+input_size: 512x512
+dataset_split: TEST
+note: All values selected strictly using validation split before touching the test set.

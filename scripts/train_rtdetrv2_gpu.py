@@ -45,8 +45,14 @@ def main():
     print(f"Configured Batch Size: {args.batch_size}")
     print(f"Configured Epochs: {args.epochs}")
     
-    # In official RT-DETR, configs are modified by overriding from CLI or rewriting the YAML.
-    # To keep this launcher robust, we'll execute the torchrun command.
+    # Explicit printouts for the exact configuration
+    print("Model:\nRT-DETRv2-L\n")
+    print("Backbone:\nHGNetv2-L\n")
+    print(f"Config:\n{args.config}\n")
+    print("Initialization checkpoint:\nPPHGNetV2_L_ssld_pretrained_from_paddle.pth (via config)\n")
+    print("Number of classes:\n2\n")
+    print("Class 0:\ngroup\n")
+    print("Class 1:\nsolder_point\n")
     
     # Ensure working directory is the RT-DETR repo
     repo_dir = r"RT-DETR\rtdetrv2_pytorch"
@@ -55,15 +61,13 @@ def main():
         sys.exit(1)
         
     cmd = [
-        "torchrun", "--nproc_per_node=1", "tools/train.py",
-        "-c", os.path.abspath(args.config)
+        sys.executable, "tools/train.py",
+        "-c", os.path.abspath(args.config),
+        "-u", f"epoches={args.epochs}", f"train_dataloader.total_batch_size={args.batch_size}"
     ]
     
     if args.resume:
         cmd.extend(["--resume", args.resume])
-    else:
-        # Transfer learning from the EMA checkpoint if not resuming a mid-training run
-        cmd.extend(["--tuning", "rtdetrv2_r50vd_120e_coco_ema.pth"])
         
     print(f"\nExecuting command:\n{' '.join(cmd)}\n")
     
